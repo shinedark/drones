@@ -10,6 +10,22 @@
      padding: 30px;
  }
 
+ @media only screen and (max-width: 820px){
+    input{
+        display: none;  
+    }
+    label {
+        display: none; 
+    }
+    h2{
+      display: none; 
+    }
+    .slider-value {
+      display: none; 
+    }
+   
+ }
+
 main.container {
   height: 100%;
   margin: 10px;
@@ -113,11 +129,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(255, 110, 110, 1);
       opacity: 0.6;
     }
     100% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(255, 110, 110, 1);
       opacity: 0.3;
     }
 }
@@ -128,11 +144,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(255, 251, 110, 1);
       opacity: 0.6;
     }
     100% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(255, 251, 110, 1);
       opacity: 0.3;
     }
 }
@@ -143,11 +159,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(131, 197, 253, 1);
       opacity: 0.6;
     }
     100% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(131, 197, 253, 1);
       opacity: 0.3;
     }
 }
@@ -158,11 +174,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(166, 110, 255, 1);
       opacity: 0.6;
     }
     100% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgb(166, 110, 255, 1);
       opacity: 0.3;
     }
 }
@@ -174,3 +190,58 @@ h1 {
     font-size: 60px;
 }
 
+
+input{
+    -webkit-appearance: none;
+    transform: rotate(270deg);
+    height: 6px;
+    margin: 15px;
+    background: radial-gradient(circle at 50% 50%, rgba(236, 221, 221, 0) 0.2em, #e4ff00 0.25em, #ffffff00 0.375em), radial-gradient(circle at 50% 75%, rgba(255, 255, 255, 0) 0.25em, #020202 0.375em, rgba(51, 51, 51, 0) 0.375em), radial-gradient(circle at 50% 50%, #2cff05 0.2em, rgba(255, 255, 255, 0) 0.25em);
+    background-size: 5px 5px;
+    background-repeat: repeat-x;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    
+}
+
+h2 {
+    color: black;
+}
+
+.slider-value {
+    color: black;
+}
+
+label {
+    color: black;
+}
+
+
+.controls {
+    display: inline-flex;
+    padding: 30px;
+    margin: 15px;
+}
+
+
+input[type='range']::-webkit-slider-thumb {
+    position: relative;
+    z-index: 5;
+    -webkit-appearance: none;
+    border: double 3px rgba(173, 160, 83, 0.78);
+    padding: 0.25em;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: .5em;
+    box-shadow: 0 0.5em 0.25em -1px rgba(114, 114, 114, 0.32);
+    cursor: ew-resize;
+    background: linear-gradient(#fff, #b3abab);
+    text-align:center;
+    background-size: 3px;
+    background-image: -webkit-linear-gradient(top, #fff, #000, #fff);
+    background-image: -moz-linear-gradient(top, #fff, #000, #fff);
+    background-image: -ms-linear-gradient(top, #fff, #000, #fff);
+    background-image: -o-linear-gradient(top, #fff, #000, #fff);
+    background-image: linear-gradient(top, #fff, #000, #fff);
+    transform: rotate(90deg);
+}

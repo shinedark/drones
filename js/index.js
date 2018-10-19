@@ -136,6 +136,7 @@ function s4(){
 s4();
 
 
+
 var sound5 = new Pizzicato.Sound({
   source: 'wave',
   options: {type: wave1[x] , frequency: wave1Frequency5 , attack: wave1A  , release: wave1R   }
@@ -161,31 +162,85 @@ function s5(){
    
 s5();
 
-
 var fxMix = Math.floor((Math.random() * 10) + 1);
 
 var flanger = new Pizzicato.Effects.Flanger({
-    time: 0.45,
+    time: 0.5,
     speed: 0.2,
-    depth: 0.1,
-    feedback: 0.1,
-    mix: 0.5
-})
+    depth: 0.9,
+    feedback: 0.7,
+    mix: 0,
+});
 
 
 var reverb = new Pizzicato.Effects.Reverb({
     time: fxMix,
     decay: fxMix,
     reverse: false,
-    mix: 0.8
+    mix: 0,
 });
 
 
 var delay = new Pizzicato.Effects.Delay({
     feedback: 0.1,
     time: 0.2,
-    mix: 0.8
+    mix: 0,
 });
 
 
+
+var segments = [
+  {
+    
+    audio: sound5,
+    effects: [
+          {
+            instance: delay,
+            parameters: {
+              mix: document.getElementById('delay-mix')
+            }
+          },
+          {
+            instance: reverb,
+            parameters: {
+              mix: document.getElementById('reverb-mix')
+            }
+          },
+          {
+            instance: flanger,
+            parameters: {
+               mix: document.getElementById('flanger-mix')
+            }
+          },
+        ],
+  },
+];
+
+
+for (var i = 0; i < segments.length; i++) {
+  (function(segment) {
+
+
+    if (!segment.effects || !segment.effects.length)
+      return;
+
+    for (var i = 0; i < segment.effects.length; i++) {
+      var effect = segment.effects[i];
+
+      for (var key in effect.parameters) {
+        (function(key, slider, instance){
+
+          var display = slider.parentNode.getElementsByClassName('slider-value')[0];
+
+          slider.addEventListener('input', function(e) {
+            display.innerHTML = instance[key] = e.target.valueAsNumber;
+
+          });
+
+        })(key, effect.parameters[key], effect.instance); 
+      }
+    }
+
+  })(segments[i]);
+}
 
