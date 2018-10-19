@@ -1,0 +1,176 @@
+* { margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family: 'Allerta Stencil', sans-serif; 
+    color: white;
+ }
+
+ .con {
+     margin: 30px;
+     padding: 30px;
+ }
+
+main.container {
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+  background-color: white;
+}
+
+
+.master {
+    padding-top: 80px;
+    padding-left: 190px;
+}
+
+.drums ,.bass , .percs , .drones , .vocals {
+  display: inline-block;
+  border: 2px #f1f1f1 double;
+}
+
+
+.sample1 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    animation: holla 3s cubic-bezier(0.47, 0, 0.75, 0.72) infinite;
+    animation-play-state: paused;
+}
+
+.sample2 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    animation: hollas 3s cubic-bezier(0.47, 0, 0.75, 0.72) infinite;
+    animation-play-state: paused;
+}
+
+.sample3 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    animation: hollass 3s cubic-bezier(0.47, 0, 0.75, 0.72) infinite;
+    animation-play-state: paused;
+}
+
+.sample4 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    animation: hollasss 3s cubic-bezier(0.47, 0, 0.75, 0.72) infinite;
+    animation-play-state: paused;
+}
+
+.sample5 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    animation: hollassss 3s cubic-bezier(0.47, 0, 0.75, 0.72) infinite;
+    animation-play-state: paused;
+}
+
+@keyframes holla {
+    0% {
+      background-color: white;
+      opacity: 1; 
+    }
+    50% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.9;
+    }
+    100% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.3;
+    }
+}
+
+
+
+@keyframes hollas {
+    0% {
+      background-color: white;
+      opacity: 1; 
+    }
+    50% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.6;
+    }
+    100% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.3;
+    }
+}
+
+@keyframes hollass {
+    0% {
+      background-color: white;
+      opacity: 1; 
+    }
+    50% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.6;
+    }
+    100% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.3;
+    }
+}
+
+@keyframes hollasss {
+    0% {
+      background-color: white;
+      opacity: 1; 
+    }
+    50% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.6;
+    }
+    100% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.3;
+    }
+}
+
+@keyframes hollassss {
+    0% {
+      background-color: white;
+      opacity: 1; 
+    }
+    50% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.6;
+    }
+    100% {
+      background-color: rgb(82, 224, 191, 1);
+      opacity: 0.3;
+    }
+}
+
+h1 {
+    color: black;
+    padding: 30px;
+    margin: 30px;
+    font-size: 60px;
+}
+
