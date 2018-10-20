@@ -45,7 +45,6 @@ main.container {
   border: 2px #f1f1f1 double;
 }
 
-
 .sample1 {
     width: 138px;
     height: 138px;
@@ -106,17 +105,38 @@ main.container {
     animation-play-state: paused;
 }
 
+.sample6 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+}
+
+.sample7 {
+    width: 138px;
+    height: 138px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    display: none;
+}
+
 @keyframes holla {
     0% {
       background-color: white;
       opacity: 1; 
     }
     50% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgba(85, 239, 196,1.0);
       opacity: 0.9;
     }
     100% {
-      background-color: rgb(82, 224, 191, 1);
+      background-color: rgba(85, 239, 196,1.0);
       opacity: 0.3;
     }
 }
@@ -129,11 +149,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(255, 110, 110, 1);
-      opacity: 0.6;
+      background-color: rgba(116, 185, 255,1.0);
+      opacity: 0.9;
     }
     100% {
-      background-color: rgb(255, 110, 110, 1);
+      background-color: rgba(116, 185, 255,1.0);
       opacity: 0.3;
     }
 }
@@ -144,11 +164,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(255, 251, 110, 1);
-      opacity: 0.6;
+      background-color: rgba(255, 234, 167,1.0);
+      opacity: 0.9;
     }
     100% {
-      background-color: rgb(255, 251, 110, 1);
+      background-color: rgba(255, 234, 167,1.0);
       opacity: 0.3;
     }
 }
@@ -159,11 +179,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(131, 197, 253, 1);
-      opacity: 0.6;
+      background-color: rgba(178, 190, 195,1.0);
+      opacity: 0.9;
     }
     100% {
-      background-color: rgb(131, 197, 253, 1);
+      background-color: rgba(178, 190, 195,1.0);
       opacity: 0.3;
     }
 }
@@ -174,11 +194,11 @@ main.container {
       opacity: 1; 
     }
     50% {
-      background-color: rgb(166, 110, 255, 1);
-      opacity: 0.6;
+      background-color: rgba(45, 52, 54,1.0);
+      opacity: 0.9;
     }
     100% {
-      background-color: rgb(166, 110, 255, 1);
+      background-color: rgba(45, 52, 54,1.0);
       opacity: 0.3;
     }
 }

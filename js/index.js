@@ -162,6 +162,97 @@ function s5(){
    
 s5();
 
+
+
+var sound6 = new Pizzicato.Sound({
+  source: 'wave',
+  options: {type: wave1[x] , frequency: wave1Frequency3 , attack: 0.1  , release: 0.3   }
+});
+
+var sound7 = new Pizzicato.Sound({
+  source: 'wave',
+  options: {type: wave1[x] , frequency: wave1Frequency2 , attack: 0.1  , release: 0.2   }
+});
+
+var sound8 = new Pizzicato.Sound({
+  source: 'wave',
+  options: {type: wave1[x] , frequency: wave1Frequency4 , attack: 0.1  , release: 0.4   }
+});
+
+
+function s6(){
+        $('.sample6').click(function() {
+          if (sound6.playing === false) {
+              sound6.volume = 1;
+              sound7.volume = 1;
+              sound8.volume = 1;
+              var randomnNoise = setTimeout(function tick() {
+                sound6.play();
+                sound6.addEffect(flanger2);
+                sound6.addEffect(delay2);
+                sound6.addEffect(reverb2);
+                timerId = setTimeout(tick,100);
+              },200);
+
+              var randomnNoiseStop = setTimeout(function tick2() {
+                sound6.stop();
+                timerId2 = setTimeout(tick2,100);
+              },210);
+
+              var randomnNoise2 = setTimeout(function tick6() {
+                sound7.play();
+                sound7.addEffect(flanger2);
+                sound7.addEffect(delay2);
+                sound7.addEffect(reverb2);
+                timerId3 = setTimeout(tick6, 111);
+              },102);
+
+              var randomnNoiseStop2 = setTimeout(function tick3() {
+                sound7.stop();
+                timerId4 = setTimeout(tick3,130);
+              },110);
+
+              var randomnNoise3 = setTimeout(function tick4() {
+                sound8.play();
+                sound8.addEffect(flanger2);
+                sound8.addEffect(delay2);
+                sound8.addEffect(reverb2);
+                timerId5 = setTimeout(tick4,200);
+              },100);
+
+              var randomnNoiseStop3 = setTimeout(function tick5() {
+                sound8.stop();
+                timerId6 = setTimeout(tick5,130);
+              },220);
+              $('.sample6').hide();
+              $('.sample7').show("slow");
+              
+          }
+          else{
+            
+            
+          } 
+        }
+      );
+}
+
+s6();
+
+function sNoise(){
+        $('.sample7').click(function() {
+            $('.sample6').show("slow");
+            $('.sample7').hide();
+            sound6.volume = 0;
+            sound7.volume = 0;
+            sound8.volume = 0;
+           
+        }
+      );
+}
+   
+sNoise();
+
+
 var fxMix = Math.floor((Math.random() * 10) + 1);
 
 var flanger = new Pizzicato.Effects.Flanger({
@@ -182,11 +273,33 @@ var reverb = new Pizzicato.Effects.Reverb({
 
 
 var delay = new Pizzicato.Effects.Delay({
-    feedback: 0.1,
+    feedback: 0.6,
     time: 0.2,
     mix: 0,
 });
 
+var flanger2 = new Pizzicato.Effects.Flanger({
+    time: 0.9,
+    speed: 0.2,
+    depth: 0.9,
+    feedback: 0.3,
+    mix: 0.5,
+});
+
+
+var reverb2 = new Pizzicato.Effects.Reverb({
+    time: fxMix,
+    decay: fxMix,
+    reverse: false,
+    mix: 0.3,
+});
+
+
+var delay2 = new Pizzicato.Effects.Delay({
+    feedback: 0.7,
+    time: 0.9,
+    mix: 0.3,
+});
 
 
 var segments = [
