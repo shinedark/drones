@@ -204,26 +204,26 @@ function s6(){
                 sound7.addEffect(flanger2);
                 sound7.addEffect(delay2);
                 sound7.addEffect(reverb2);
-                timerId3 = setTimeout(tick6, 111);
-              },102);
+                timerId3 = setTimeout(tick6, 151);
+              },262);
 
               var randomnNoiseStop2 = setTimeout(function tick3() {
                 sound7.stop();
-                timerId4 = setTimeout(tick3,130);
-              },110);
+                timerId4 = setTimeout(tick3,151);
+              },270);
 
               var randomnNoise3 = setTimeout(function tick4() {
                 sound8.play();
                 sound8.addEffect(flanger2);
                 sound8.addEffect(delay2);
                 sound8.addEffect(reverb2);
-                timerId5 = setTimeout(tick4,200);
-              },100);
+                timerId5 = setTimeout(tick4,100);
+              },200);
 
               var randomnNoiseStop3 = setTimeout(function tick5() {
                 sound8.stop();
                 timerId6 = setTimeout(tick5,130);
-              },220);
+              },120);
               $('.sample6').hide();
               $('.sample7').show("slow");
               
@@ -253,7 +253,6 @@ function sNoise(){
 sNoise();
 
 
-var fxMix = Math.floor((Math.random() * 10) + 1);
 
 var flanger = new Pizzicato.Effects.Flanger({
     time: 0.5,
@@ -265,8 +264,8 @@ var flanger = new Pizzicato.Effects.Flanger({
 
 
 var reverb = new Pizzicato.Effects.Reverb({
-    time: fxMix,
-    decay: fxMix,
+    time: 7,
+    decay: 0.8,
     reverse: false,
     mix: 0,
 });
@@ -278,29 +277,27 @@ var delay = new Pizzicato.Effects.Delay({
     mix: 0,
 });
 
-var flanger2 = new Pizzicato.Effects.Flanger({
-    time: 0.9,
-    speed: 0.2,
-    depth: 0.9,
-    feedback: 0.3,
-    mix: 0.5,
+
+var flanger2 = new Pizzicato.Effects.RingModulator({
+    speed: 6,
+    distortion: 1,
+    mix: 0.5
 });
 
 
 var reverb2 = new Pizzicato.Effects.Reverb({
-    time: fxMix,
-    decay: fxMix,
+    time: 6,
+    decay: 0.9,
     reverse: false,
     mix: 0.3,
 });
 
 
-var delay2 = new Pizzicato.Effects.Delay({
-    feedback: 0.7,
-    time: 0.9,
-    mix: 0.3,
+var delay2 = new Pizzicato.Effects.PingPongDelay({
+    feedback: 0.3,
+    time: 0.2,
+    mix: 0.68
 });
-
 
 var segments = [
   {
