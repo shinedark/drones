@@ -56,10 +56,17 @@ function s1(){
    
 s1();
 
+var wave2 = new Array();
+wave2[0] = 'sawtooth';
+wave2[1] = 'triangle';
+wave2[2] = 'sine';
+wave2[3] = 'square';
+var size2 = wave2.length;
+var x2 = Math.floor(size2*Math.random());
 
 var sound2 = new Pizzicato.Sound({
   source: 'wave',
-  options: {type: wave1[x] , frequency: wave1Frequency2 , attack: wave1A  , release: wave1R   }
+  options: {type: wave2[x2] , frequency: wave1Frequency2 , attack: wave1A  , release: wave1R   }
 });
 
 
@@ -82,10 +89,17 @@ function s2(){
    
 s2();
 
+var wave3 = new Array();
+wave3[0] = 'sawtooth';
+wave3[1] = 'triangle';
+wave3[2] = 'sine';
+wave3[3] = 'square';
+var size3 = wave3.length;
+var x3 = Math.floor(size3*Math.random());
 
 var sound3 = new Pizzicato.Sound({
   source: 'wave',
-  options: {type: wave1[x] , frequency: wave1Frequency3 , attack: wave1A  , release: wave1R   }
+  options: {type: wave3[x3] , frequency: wave1Frequency3 , attack: wave1A  , release: wave1R   }
 });
 
 
@@ -108,11 +122,18 @@ function s3(){
    
 s3();
 
+var wave4 = new Array();
+wave4[0] = 'sawtooth';
+wave4[1] = 'triangle';
+wave4[2] = 'sine';
+wave4[3] = 'square';
+var size4 = wave4.length;
+var x4 = Math.floor(size4*Math.random());
 
 
 var sound4 = new Pizzicato.Sound({
   source: 'wave',
-  options: {type: wave1[x] , frequency: wave1Frequency4 , attack: wave1A  , release: wave1R   }
+  options: {type: wave4[x4] , frequency: wave1Frequency4 , attack: wave1A  , release: wave1R   }
 });
 
 
@@ -135,11 +156,17 @@ function s4(){
    
 s4();
 
-
+var wave5 = new Array();
+wave5[0] = 'sawtooth';
+wave5[1] = 'triangle';
+wave5[2] = 'sine';
+wave5[3] = 'square';
+var size5 = wave5.length;
+var x5 = Math.floor(size5*Math.random());
 
 var sound5 = new Pizzicato.Sound({
   source: 'wave',
-  options: {type: wave1[x] , frequency: wave1Frequency5 , attack: wave1A  , release: wave1R   }
+  options: {type: wave5[x5] , frequency: wave1Frequency5 , attack: wave1A  , release: wave1R   }
 });
 
 
@@ -171,12 +198,12 @@ var sound6 = new Pizzicato.Sound({
 
 var sound7 = new Pizzicato.Sound({
   source: 'wave',
-  options: {type: wave1[x] , frequency: wave1Frequency2 , attack: 0.1  , release: 0.2   }
+  options: {type: wave3[x3] , frequency: wave1Frequency2 , attack: 0.1  , release: 0.2   }
 });
 
 var sound8 = new Pizzicato.Sound({
   source: 'wave',
-  options: {type: wave1[x] , frequency: wave1Frequency4 , attack: 0.1  , release: 0.4   }
+  options: {type: wave2[x2] , frequency: wave1Frequency4 , attack: 0.1  , release: 0.4   }
 });
 
 
